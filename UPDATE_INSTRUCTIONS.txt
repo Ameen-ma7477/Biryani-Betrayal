@@ -1,0 +1,37 @@
+BIRYANI BETRAYAL — NIGHT & DAWN SCREENS UPDATE
+
+For your existing standard Next.js/Vercel repository.
+
+Update exactly THREE website files:
+
+1. ADD lib/round-events.mjs
+2. ADD components/round-announcement.tsx
+3. REPLACE app/page.tsx
+
+COPY/PASTE ON GITHUB
+
+For each ADD, click Add file > Create new file. Enter the full path above, including the folder and extension. Open the matching downloaded file in a text editor, copy its entire contents, paste into GitHub, and commit.
+
+For app/page.tsx, open your EXISTING app folder on GitHub, select page.tsx, click Edit (pencil), select all its text, and replace it with the entire contents of the downloaded app/page.tsx. Commit with: Add fullscreen night and dawn announcements.
+
+Add both new files BEFORE replacing app/page.tsx so the imports exist when Vercel builds. Alternatively upload the app, components, and lib folders from this patch together in ONE commit, preserving the folder paths and replacing the matching page.tsx. Do not delete the other files already in those folders.
+
+No package.json, database, environment-variable, or CSS-file changes are needed. Announcement styles are included in the new component. No need to upload this instruction file.
+
+WHAT CHANGES
+
+- Night begins: a fullscreen NIGHT FALLS announcement.
+- Dawn: a fullscreen PLATE TAKEN announcement with the eliminated guest's name and no role.
+- Nobody removed: EVERY PLATE IS SAFE.
+- Each announcement automatically closes after three seconds; Continue and Escape dismiss it early.
+- Game timers keep running. Players return to the night actions, chats, and facts afterwards.
+- Repeated polling does not reopen the same announcement. New rounds and rematches have distinct events.
+- If a night removal ends the match, the dawn screen appears before the existing win/loss result screen.
+
+After committing, wait for the newest Vercel deployment to show Ready, then refresh the game on each device.
+
+VERIFICATION
+
+The complete 26-test suite passed. The four announcement event/privacy tests were also rerun after the final event-ID change. A standard Next.js production build, including TypeScript checks, passed. Browser-based visual QA was unavailable; test the screens with friends after deployment.
+
+The current ChatGPT-hosted site was not changed by this patch.
